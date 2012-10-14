@@ -1,0 +1,5 @@
+.settings/
+*Db.properties
+*Db.script
+stacktrace.log
+target/
