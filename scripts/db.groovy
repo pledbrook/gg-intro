@@ -3,6 +3,3 @@
 import groovy.sql.Sql
 
 def sql = Sql.newInstance("jdbc:mysql://localhost/grails_org", "root", "", "com.mysql.jdbc.Driver")
-sql.eachRow("SELECT * from pending_release") {
-    println it
-}
