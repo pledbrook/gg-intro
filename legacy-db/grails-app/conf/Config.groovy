@@ -9,6 +9,9 @@
 // if(System.properties["${appName}.config.location"]) {
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
+/* (non-Javadoc)
+ * @see groovy.lang.Script#run()
+ */
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                       xml: ['text/xml', 'application/xml'],
@@ -63,5 +66,6 @@ grails.plugins.dynamicController.mixins = [
    'com.burtbeckwith.grails.plugins.appinfo.SpringControllerMixin' :     'org.example.AdminManageController',
    'com.burtbeckwith.grails.plugins.appinfo.MemoryControllerMixin' :     'org.example.AdminManageController',
    'com.burtbeckwith.grails.plugins.appinfo.PropertiesControllerMixin' : 'org.example.AdminManageController',
-   'com.burtbeckwith.grails.plugins.appinfo.ScopesControllerMixin' :     'org.example.AdminManageController'
+   'com.burtbeckwith.grails.plugins.appinfo.ScopesControllerMixin' :     'org.example.AdminManageController',
+   'com.burtbeckwith.grails.plugins.appinfo.ThreadsControllerMixin' :    'com.burtbeckwith.appinfo_test.AdminManageController'
 ]

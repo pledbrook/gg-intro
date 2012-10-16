@@ -31,8 +31,8 @@ grails.project.dependency.resolution = {
     plugins {
 //        compile ":database-migration:1.0"
         compile ":hibernate:$grailsVersion"
-        compile ":jquery:1.6.1.1"
-        runtime ":dynamic-controller:0.2.1", ":app-info:0.4.3", ":google-visualization:0.4.2"
+        runtime ":resources:1.2.RC2", ":jquery:1.6.1.1"
+        runtime ":app-info:1.0.2"
 
         build ":tomcat:$grailsVersion"
     }
