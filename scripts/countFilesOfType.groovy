@@ -11,15 +11,15 @@ def extension = args[0]
 def searchDir = new File(args.size() > 1 ? args[1] : '.')
 def count = 0
 
+/*
 def filesInDir = searchDir.listFiles()
 for (File f in filesInDir) {
     if (new Filename(f).ext == extension) count++
 }
-/*
+*/
 searchDir.traverse(type: FileType.FILES) { File f ->
     if (new Filename(f).ext == extension) count++
 }
-*/
 
 println "Found $count files"
 

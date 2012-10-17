@@ -1,5 +1,6 @@
 package org.springframework.samples.travel.web;
 
+import groovy.transform.TypeChecked
 import java.security.Principal;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+@TypeChecked
 @Controller
 public class HotelsMvcController {
 
@@ -22,6 +24,7 @@ public class HotelsMvcController {
 
     @RequestMapping(value = "/hotels/search", method = RequestMethod.GET)
     public void search(SearchCriteria searchCriteria, Principal currentUser, Model model) {
+		println ">> Hello there: ${model.asMap()}"
         if (currentUser != null) {
             List<Booking> booking = bookingService.findBookings(currentUser.getName());
             model.addAttribute(booking);
