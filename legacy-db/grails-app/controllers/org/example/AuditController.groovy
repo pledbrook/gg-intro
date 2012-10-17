@@ -6,9 +6,9 @@ class AuditController {
     def senderService
 
     def test() {}
-    def send() {
-        senderService.send(params.message)
-        flash.message = params.message
+    def send(String message) {
+        senderService.send(message)
+        flash.message = message
         redirect action: "test"
     }
 }
